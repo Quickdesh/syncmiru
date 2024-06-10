@@ -3,10 +3,10 @@ package sync
 import (
 	"context"
 	"fmt"
-	"github.com/SyncYomi/SyncYomi/internal/notification"
+	"github.com/Quickdesh/SyncMiru/internal/notification"
 
-	"github.com/SyncYomi/SyncYomi/internal/domain"
-	"github.com/SyncYomi/SyncYomi/internal/logger"
+	"github.com/Quickdesh/SyncMiru/internal/domain"
+	"github.com/Quickdesh/SyncMiru/internal/logger"
 	"github.com/rs/zerolog"
 )
 
@@ -64,7 +64,7 @@ func (s service) SetSyncDataIfMatch(ctx context.Context, apiKey string, etag str
 func (s service) notifySyncStarted(apiKeyName string) {
 	s.notificationService.Send(domain.NotificationEventSyncStarted, domain.NotificationPayload{
 		Subject: "Sync Initiated",
-		Message: fmt.Sprintf("A sync operation between Tachiyomi and your library has been initiated for user **%s**. "+
+		Message: fmt.Sprintf("A sync operation between Animiru and your library has been initiated for user **%s**. "+
 			"Please wait for the process to complete.", apiKeyName),
 	})
 }
@@ -72,20 +72,20 @@ func (s service) notifySyncStarted(apiKeyName string) {
 func (s service) notifySyncSuccess(apiKeyName string) {
 	s.notificationService.Send(domain.NotificationEventSyncSuccess, domain.NotificationPayload{
 		Subject: "Sync Completed Successfully",
-		Message: fmt.Sprintf("The synchronization with your Tachiyomi library has completed successfully for user **%s**.", apiKeyName),
+		Message: fmt.Sprintf("The synchronization with your Animiru library has completed successfully for user **%s**.", apiKeyName),
 	})
 }
 
 func (s service) notifySyncFailed(apiKeyName string, errMsg string) {
 	s.notificationService.Send(domain.NotificationEventSyncFailed, domain.NotificationPayload{
 		Subject: "Sync Operation Failed",
-		Message: fmt.Sprintf("The synchronization with Tachiyomi failed for user **%s**. Error: %s", apiKeyName, errMsg),
+		Message: fmt.Sprintf("The synchronization with Animiru failed for user **%s**. Error: %s", apiKeyName, errMsg),
 	})
 }
 
 func (s service) notifySyncError(apiKeyName string, errMsg string) {
 	s.notificationService.Send(domain.NotificationEventSyncError, domain.NotificationPayload{
 		Subject: "Error During Sync",
-		Message: fmt.Sprintf("An error occurred during synchronization with Tachiyomi for user **%s**. Error: %s", apiKeyName, errMsg),
+		Message: fmt.Sprintf("An error occurred during synchronization with Animiru for user **%s**. Error: %s", apiKeyName, errMsg),
 	})
 }

@@ -20,33 +20,33 @@ func TestDataSourceName(t *testing.T) {
 			name: "default",
 			args: args{
 				configPath: "",
-				name:       "syncyomi.db",
+				name:       "syncmiru.db",
 			},
-			want: "syncyomi.db",
+			want: "syncmiru.db",
 		},
 		{
 			name: "path_1",
 			args: args{
 				configPath: "/config",
-				name:       "syncyomi.db",
+				name:       "syncmiru.db",
 			},
-			want: "/config/syncyomi.db",
+			want: "/config/syncmiru.db",
 		},
 		{
 			name: "path_2",
 			args: args{
 				configPath: "/config/",
-				name:       "syncyomi.db",
+				name:       "syncmiru.db",
 			},
-			want: "/config/syncyomi.db",
+			want: "/config/syncmiru.db",
 		},
 		{
 			name: "path_3",
 			args: args{
 				configPath: "/config//",
-				name:       "syncyomi.db",
+				name:       "syncmiru.db",
 			},
-			want: "/config/syncyomi.db",
+			want: "/config/syncmiru.db",
 		},
 	}
 	for _, tt := range tests {

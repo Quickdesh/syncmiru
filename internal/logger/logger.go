@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/SyncYomi/SyncYomi/internal/domain"
+	"github.com/Quickdesh/SyncMiru/internal/domain"
 
 	"github.com/r3labs/sse/v2"
 	"github.com/rs/zerolog"

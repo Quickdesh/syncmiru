@@ -116,11 +116,11 @@ BEGIN
     IF NOT EXISTS (
         SELECT 1 FROM information_schema.columns 
         WHERE table_schema = 'public'  -- or your specific schema if not default
-        AND table_name = 'manga_sync'
+        AND table_name = 'anime_sync'
         AND column_name = 'device_id'
     ) THEN
         -- Add the column if it does not exist
-        ALTER TABLE manga_sync ADD COLUMN device_id TEXT NOT NULL DEFAULT '';
+        ALTER TABLE anime_sync ADD COLUMN device_id TEXT NOT NULL DEFAULT '';
     END IF;
 END $$;
 
@@ -141,8 +141,8 @@ END $$;
 	)
 `,
 	`
-	DROP TABLE IF EXISTS manga_data;
-	DROP TABLE IF EXISTS manga_sync;
-	DROP TABLE IF EXISTS sync_lock;
+	DROP TABLE IF EXISTS anime_data;
+	DROP TABLE IF EXISTS anime_sync;
+	DROP TABLE IF EXISTS anime_lock;
 `,
 }

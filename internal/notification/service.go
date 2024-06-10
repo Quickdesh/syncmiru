@@ -2,8 +2,8 @@ package notification
 
 import (
 	"context"
-	"github.com/SyncYomi/SyncYomi/internal/domain"
-	"github.com/SyncYomi/SyncYomi/internal/logger"
+	"github.com/Quickdesh/SyncMiru/internal/domain"
+	"github.com/Quickdesh/SyncMiru/internal/logger"
 	"github.com/pkg/errors"
 	"github.com/rs/zerolog"
 	"golang.org/x/sync/errgroup"

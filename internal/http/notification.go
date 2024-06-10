@@ -3,7 +3,7 @@ package http
 import (
 	"context"
 	"encoding/json"
-	"github.com/SyncYomi/SyncYomi/internal/domain"
+	"github.com/Quickdesh/SyncMiru/internal/domain"
 	"github.com/go-chi/chi/v5"
 	"net/http"
 	"strconv"

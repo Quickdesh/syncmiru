@@ -2,8 +2,8 @@ package user
 
 import (
 	"context"
-	"github.com/SyncYomi/SyncYomi/internal/domain"
-	"github.com/SyncYomi/SyncYomi/pkg/errors"
+	"github.com/Quickdesh/SyncMiru/internal/domain"
+	"github.com/Quickdesh/SyncMiru/pkg/errors"
 )
 
 type Service interface {

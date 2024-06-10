@@ -2,9 +2,9 @@ package update
 
 import (
 	"context"
-	"github.com/SyncYomi/SyncYomi/internal/domain"
-	"github.com/SyncYomi/SyncYomi/internal/logger"
-	"github.com/SyncYomi/SyncYomi/pkg/version"
+	"github.com/Quickdesh/SyncMiru/internal/domain"
+	"github.com/Quickdesh/SyncMiru/internal/logger"
+	"github.com/Quickdesh/SyncMiru/pkg/version"
 	"github.com/rs/zerolog"
 	"sync"
 )
@@ -22,7 +22,7 @@ func NewUpdate(log logger.Logger, config *domain.Config) *Service {
 	return &Service{
 		log:            log.With().Str("module", "update").Logger(),
 		config:         config,
-		releaseChecker: version.NewChecker("SyncYomi", "SyncYomi", config.Version),
+		releaseChecker: version.NewChecker("SyncMiru", "SyncMiru", config.Version),
 	}
 }
 
@@ -51,7 +51,7 @@ func (s *Service) CheckUpdateAvailable(ctx context.Context) (*version.Release, e
 	}
 
 	if newAvailable {
-		s.log.Info().Msgf("SyncYomi outdated, found newer release: %s", newVersion.TagName)
+		s.log.Info().Msgf("SyncMiru outdated, found newer release: %s", newVersion.TagName)
 
 		s.m.Lock()
 		defer s.m.Unlock()

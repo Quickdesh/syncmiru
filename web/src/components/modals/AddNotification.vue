@@ -106,7 +106,7 @@
                 <v-list-subheader>
                   Notifiarr
                   <v-list-item-subtitle>
-                    Enable the syncyomi integration and optionally create a new
+                    Enable the syncmiru integration and optionally create a new
                     API Key.
                   </v-list-item-subtitle>
                 </v-list-subheader>

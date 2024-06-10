@@ -6,9 +6,9 @@ import (
 	"time"
 
 	sq "github.com/Masterminds/squirrel"
-	"github.com/SyncYomi/SyncYomi/internal/domain"
-	"github.com/SyncYomi/SyncYomi/internal/logger"
-	"github.com/SyncYomi/SyncYomi/pkg/errors"
+	"github.com/Quickdesh/SyncMiru/internal/domain"
+	"github.com/Quickdesh/SyncMiru/internal/logger"
+	"github.com/Quickdesh/SyncMiru/pkg/errors"
 	"github.com/google/uuid"
 	"github.com/rs/zerolog"
 )

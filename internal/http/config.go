@@ -2,8 +2,8 @@ package http
 
 import (
 	"encoding/json"
-	"github.com/SyncYomi/SyncYomi/internal/config"
-	"github.com/SyncYomi/SyncYomi/internal/domain"
+	"github.com/Quickdesh/SyncMiru/internal/config"
+	"github.com/Quickdesh/SyncMiru/internal/domain"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/render"
 	"net/http"

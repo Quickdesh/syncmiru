@@ -46,28 +46,28 @@ port = 8282
 # Postgres User
 # Set postgres user to use.
 #
-#PostgresUser = "SyncYomi"
+#PostgresUser = "SyncMiru"
 
 # Postgres Pass
 # Set postgres password to use.
 #
 #
-#PostgresPass = "SyncYomi"
+#PostgresPass = "SyncMiru"
 
 # Base url
-# Set custom baseUrl eg /tachiyomi/ to serve in subdirectory.
+# Set custom baseUrl eg /animiru/ to serve in subdirectory.
 # Not needed for subdomain, or by accessing with the :port directly.
 #
 # Optional
 #
-#baseUrl = "/SyncYomi/"
+#baseUrl = "/SyncMiru/"
 
-# tachiyomi-sync-server logs file
+# animiru-sync-server logs file
 # If not defined, logs to stdout make sure it's forward slash otherwise it won't work
 #
 # Optional
 #
-#logPath = "log/SyncYomi.log"
+#logPath = "log/SyncMiru.log"
 
 # Log level
 #

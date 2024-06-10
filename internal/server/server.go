@@ -2,10 +2,10 @@ package server
 
 import (
 	"context"
-	"github.com/SyncYomi/SyncYomi/internal/domain"
-	"github.com/SyncYomi/SyncYomi/internal/logger"
-	"github.com/SyncYomi/SyncYomi/internal/scheduler"
-	"github.com/SyncYomi/SyncYomi/internal/update"
+	"github.com/Quickdesh/SyncMiru/internal/domain"
+	"github.com/Quickdesh/SyncMiru/internal/logger"
+	"github.com/Quickdesh/SyncMiru/internal/scheduler"
+	"github.com/Quickdesh/SyncMiru/internal/update"
 	"github.com/rs/zerolog"
 	"sync"
 	"time"

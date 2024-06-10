@@ -3,7 +3,7 @@ package http
 import (
 	"context"
 	"encoding/json"
-	"github.com/SyncYomi/SyncYomi/internal/domain"
+	"github.com/Quickdesh/SyncMiru/internal/domain"
 	"github.com/go-chi/chi/v5"
 	"github.com/gorilla/sessions"
 	"github.com/rs/zerolog"
@@ -59,7 +59,7 @@ func (h authHandler) login(w http.ResponseWriter, r *http.Request) {
 	h.cookieStore.Options.SameSite = http.SameSiteLaxMode
 	h.cookieStore.Options.Path = h.config.BaseURL
 
-	// syncyomi does not support serving on TLS / https, so this is only available behind reverse proxy
+	// syncmiru does not support serving on TLS / https, so this is only available behind reverse proxy
 	// if forwarded protocol is https then set cookie secure
 	// SameSite Strict can only be set with a secure cookie. So we overwrite it here if possible.
 	// https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite

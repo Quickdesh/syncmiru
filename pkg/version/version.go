@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/SyncYomi/SyncYomi/pkg/errors"
+	"github.com/Quickdesh/SyncMiru/pkg/errors"
 	"io"
 	"net/http"
 	"runtime"
@@ -161,7 +161,7 @@ func (c *Checker) checkNewVersion(version string, release *Release) (bool, strin
 }
 
 func (c *Checker) buildUserAgent() string {
-	return fmt.Sprintf("SyncYomi/%s (%s %s)", c.CurrentVersion, runtime.GOOS, runtime.GOARCH)
+	return fmt.Sprintf("SyncMiru/%s (%s %s)", c.CurrentVersion, runtime.GOOS, runtime.GOARCH)
 }
 
 func isDevelop(version string) bool {

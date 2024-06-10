@@ -1,19 +1,19 @@
 package main
 
 import (
-	"github.com/SyncYomi/SyncYomi/internal/api"
-	"github.com/SyncYomi/SyncYomi/internal/auth"
-	"github.com/SyncYomi/SyncYomi/internal/config"
-	"github.com/SyncYomi/SyncYomi/internal/database"
-	"github.com/SyncYomi/SyncYomi/internal/events"
-	"github.com/SyncYomi/SyncYomi/internal/http"
-	"github.com/SyncYomi/SyncYomi/internal/logger"
-	"github.com/SyncYomi/SyncYomi/internal/notification"
-	"github.com/SyncYomi/SyncYomi/internal/scheduler"
-	"github.com/SyncYomi/SyncYomi/internal/server"
-	"github.com/SyncYomi/SyncYomi/internal/sync"
-	"github.com/SyncYomi/SyncYomi/internal/update"
-	"github.com/SyncYomi/SyncYomi/internal/user"
+	"github.com/Quickdesh/SyncMiru/internal/api"
+	"github.com/Quickdesh/SyncMiru/internal/auth"
+	"github.com/Quickdesh/SyncMiru/internal/config"
+	"github.com/Quickdesh/SyncMiru/internal/database"
+	"github.com/Quickdesh/SyncMiru/internal/events"
+	"github.com/Quickdesh/SyncMiru/internal/http"
+	"github.com/Quickdesh/SyncMiru/internal/logger"
+	"github.com/Quickdesh/SyncMiru/internal/notification"
+	"github.com/Quickdesh/SyncMiru/internal/scheduler"
+	"github.com/Quickdesh/SyncMiru/internal/server"
+	"github.com/Quickdesh/SyncMiru/internal/sync"
+	"github.com/Quickdesh/SyncMiru/internal/update"
+	"github.com/Quickdesh/SyncMiru/internal/user"
 	"github.com/asaskevich/EventBus"
 	"github.com/r3labs/sse/v2"
 	"github.com/spf13/pflag"
@@ -59,7 +59,7 @@ func main() {
 		log.Fatal().Err(err).Msg("could not open db connection")
 	}
 
-	log.Info().Msgf("Starting SyncYomi")
+	log.Info().Msgf("Starting SyncMiru")
 	log.Info().Msgf("Version: %s", version)
 	log.Info().Msgf("Commit: %s", commit)
 	log.Info().Msgf("Build date: %s", date)

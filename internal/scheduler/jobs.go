@@ -2,9 +2,9 @@ package scheduler
 
 import (
 	"context"
-	"github.com/SyncYomi/SyncYomi/internal/domain"
-	"github.com/SyncYomi/SyncYomi/internal/notification"
-	"github.com/SyncYomi/SyncYomi/internal/update"
+	"github.com/Quickdesh/SyncMiru/internal/domain"
+	"github.com/Quickdesh/SyncMiru/internal/notification"
+	"github.com/Quickdesh/SyncMiru/internal/update"
 	"github.com/rs/zerolog"
 	"time"
 )

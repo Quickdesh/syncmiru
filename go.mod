@@ -1,4 +1,4 @@
-module github.com/SyncYomi/SyncYomi
+module github.com/Quickdesh/SyncMiru
 
 go 1.20
 

@@ -2,10 +2,10 @@ package http
 
 import (
 	"fmt"
-	"github.com/SyncYomi/SyncYomi/internal/config"
-	"github.com/SyncYomi/SyncYomi/internal/database"
-	"github.com/SyncYomi/SyncYomi/internal/logger"
-	"github.com/SyncYomi/SyncYomi/web"
+	"github.com/Quickdesh/SyncMiru/internal/config"
+	"github.com/Quickdesh/SyncMiru/internal/database"
+	"github.com/Quickdesh/SyncMiru/internal/logger"
+	"github.com/Quickdesh/SyncMiru/web"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/gorilla/sessions"

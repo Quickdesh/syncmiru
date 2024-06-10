@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/SyncYomi/SyncYomi/internal/domain"
+	"github.com/Quickdesh/SyncMiru/internal/domain"
 	"sync"
 	"testing"
 

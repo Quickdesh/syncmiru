@@ -2,7 +2,7 @@ package database
 
 import (
 	"database/sql"
-	"github.com/SyncYomi/SyncYomi/pkg/errors"
+	"github.com/Quickdesh/SyncMiru/pkg/errors"
 	_ "github.com/lib/pq"
 )
 
@@ -55,7 +55,7 @@ func (db *DB) migratePostgres() error {
 	if version == len(postgresMigrations) {
 		return nil
 	} else if version > len(postgresMigrations) {
-		return errors.New("SyncYomi (version %d) older than schema (version: %d)", len(postgresMigrations), version)
+		return errors.New("SyncMiru (version %d) older than schema (version: %d)", len(postgresMigrations), version)
 	}
 
 	db.log.Info().Msgf("Beginning database schema upgrade from version %v to version: %v", version, len(postgresMigrations))

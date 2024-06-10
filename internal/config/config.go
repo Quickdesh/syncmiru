@@ -3,10 +3,10 @@ package config
 import (
 	"bytes"
 	"fmt"
-	"github.com/SyncYomi/SyncYomi/internal/api"
-	"github.com/SyncYomi/SyncYomi/internal/domain"
-	"github.com/SyncYomi/SyncYomi/internal/logger"
-	"github.com/SyncYomi/SyncYomi/pkg/errors"
+	"github.com/Quickdesh/SyncMiru/internal/api"
+	"github.com/Quickdesh/SyncMiru/internal/domain"
+	"github.com/Quickdesh/SyncMiru/internal/logger"
+	"github.com/Quickdesh/SyncMiru/pkg/errors"
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
 	"log"
@@ -66,28 +66,28 @@ port = 8282
 # Postgres User
 # Set postgres user to use.
 #
-#PostgresUser = "SyncYomi"
+#PostgresUser = "SyncMiru"
 
 # Postgres Pass
 # Set postgres password to use.
 #
 #
-#PostgresPass = "SyncYomi"
+#PostgresPass = "SyncMiru"
 
 # Base url
-# Set custom baseUrl eg /SyncYomi/ to serve in subdirectory.
+# Set custom baseUrl eg /SyncMiru/ to serve in subdirectory.
 # Not needed for subdomain, or by accessing with the :port directly.
 #
 # Optional
 #
-#baseUrl = "/SyncYomi/"
+#baseUrl = "/SyncMiru/"
 
-# tachiyomi-sync-server logs file
+# animiru-sync-server logs file
 # If not defined, logs to stdout make sure it's forward slash otherwise it won't work
 #
 # Optional
 #
-#logPath = "log/SyncYomi.log"
+#logPath = "log/SyncMiru.log"
 
 # Log level
 #
@@ -242,8 +242,8 @@ func (c *AppConfig) defaults() {
 		PostgresHost:     "localhost",
 		PostgresPort:     5434,
 		PostgresDatabase: "postgres",
-		PostgresUser:     "SyncYomi",
-		PostgresPass:     "SyncYomi",
+		PostgresUser:     "SyncMiru",
+		PostgresPass:     "SyncMiru",
 	}
 }
 
@@ -274,8 +274,8 @@ func (c *AppConfig) load(configPath string) {
 
 		// Search config in directories
 		viper.AddConfigPath(".")
-		viper.AddConfigPath("$HOME/.config/syncyomi")
-		viper.AddConfigPath("$HOME/.syncyomi")
+		viper.AddConfigPath("$HOME/.config/syncmiru")
+		viper.AddConfigPath("$HOME/.syncmiru")
 	}
 
 	// read config

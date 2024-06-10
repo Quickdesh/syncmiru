@@ -1,11 +1,11 @@
 openapi: 3.0.0
 info:
-  title: SyncYomi Server API
-  description: SyncYomi Server API
+  title: SyncMiru Server API
+  description: SyncMiru Server API
   contact:
     name: Kaiser
     email: kaiserbh@proton.me
-    url: https://github.com/SyncYomi/SyncYomi
+    url: https://github.com/Quickdesh/SyncMiru
   version: 1.0.0
 servers:
   - url: http://localhost:8282/api

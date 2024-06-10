@@ -1,7 +1,7 @@
 package http
 
 import (
-	"github.com/SyncYomi/SyncYomi/internal/database"
+	"github.com/Quickdesh/SyncMiru/internal/database"
 	"github.com/go-chi/chi/v5"
 	"net/http"
 )

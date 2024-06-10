@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/SyncYomi/SyncYomi/internal/sync"
+	"github.com/Quickdesh/SyncMiru/internal/sync"
 	"github.com/go-chi/chi/v5"
 )
 

@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"crypto/tls"
 	"encoding/json"
-	"github.com/SyncYomi/SyncYomi/internal/domain"
-	"github.com/SyncYomi/SyncYomi/pkg/errors"
+	"github.com/Quickdesh/SyncMiru/internal/domain"
+	"github.com/Quickdesh/SyncMiru/pkg/errors"
 	"github.com/rs/zerolog"
 	"io"
 	"net/http"
@@ -34,7 +34,7 @@ func NewNotifiarrSender(log zerolog.Logger, settings domain.Notification) domain
 	return &notifiarrSender{
 		log:      log.With().Str("sender", "notifiarr").Logger(),
 		Settings: settings,
-		baseUrl:  "https://notifiarr.com/api/v1/notification/syncyomi",
+		baseUrl:  "https://notifiarr.com/api/v1/notification/syncmiru",
 	}
 }
 
@@ -57,7 +57,7 @@ func (s *notifiarrSender) Send(event domain.NotificationEvent, payload domain.No
 	}
 
 	req.Header.Set("Content-Type", "application/json")
-	req.Header.Set("User-Agent", "SyncYomi")
+	req.Header.Set("User-Agent", "SyncMiru")
 	req.Header.Set("X-API-Key", s.Settings.APIKey)
 
 	t := &http.Transport{

@@ -145,7 +145,7 @@ var sqliteMigrations = []string{
     -- Drop the old table
     DROP TABLE _sync_lock_old;
 `,
-	`ALTER TABLE manga_sync
+	`ALTER TABLE anime_sync
 	ADD COLUMN device_id TEXT NOT NULL DEFAULT '';
 `,
 	`
@@ -164,8 +164,8 @@ var sqliteMigrations = []string{
     )
 `,
 	`
-	DROP TABLE IF EXISTS manga_data;
-	DROP TABLE IF EXISTS manga_sync;
+	DROP TABLE IF EXISTS anime_data;
+	DROP TABLE IF EXISTS anime_sync;
 	DROP TABLE IF EXISTS sync_lock;
 `,
 }

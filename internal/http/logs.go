@@ -2,7 +2,7 @@ package http
 
 import (
 	"fmt"
-	"github.com/SyncYomi/SyncYomi/internal/config"
+	"github.com/Quickdesh/SyncMiru/internal/config"
 	"github.com/dustin/go-humanize"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/render"

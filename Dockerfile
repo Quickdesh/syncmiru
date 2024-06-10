@@ -17,7 +17,7 @@ ARG BUILDTIME
 
 RUN apk add --no-cache git make build-base tzdata
 
-ENV SERVICE=syncyomi
+ENV SERVICE=syncmiru
 
 WORKDIR /src
 
@@ -29,12 +29,12 @@ COPY . ./
 COPY --from=web-builder /web/dist ./web/dist
 COPY --from=web-builder /web/build.go ./web
 
-RUN go build -ldflags "-s -w -X main.version=${VERSION} -X main.commit=${REVISION} -X main.date=${BUILDTIME}" -o bin/syncyomi main.go
+RUN go build -ldflags "-s -w -X main.version=${VERSION} -X main.commit=${REVISION} -X main.date=${BUILDTIME}" -o bin/syncmiru main.go
 
 # build final image
 FROM alpine:latest
 
-LABEL org.opencontainers.image.source = "https://github/SyncYomi/SyncYomi"
+LABEL org.opencontainers.image.source = "https://github/Quickdesh/SyncMiru"
 
 ENV HOME="/config" \
 XDG_CONFIG_HOME="/config" \
@@ -46,8 +46,8 @@ WORKDIR /app
 
 VOLUME /config
 
-COPY --from=app-builder /src/bin/syncyomi /usr/local/bin/
+COPY --from=app-builder /src/bin/syncmiru /usr/local/bin/
 
 EXPOSE 8282
 
-ENTRYPOINT ["/usr/local/bin/syncyomi", "--config", "/config"]
+ENTRYPOINT ["/usr/local/bin/syncmiru", "--config", "/config"]
